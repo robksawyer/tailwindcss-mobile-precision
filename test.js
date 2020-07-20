@@ -1,0 +1,5 @@
+const _ = require('lodash')
+const cssMatcher = require('jest-matcher-css')
+const postcss = require('postcss')
+const tailwindcss = require('tailwindcss')
+const mobilePrecisionPlugin = require('./index.js')
