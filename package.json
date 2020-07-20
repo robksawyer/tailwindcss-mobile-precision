@@ -8,7 +8,7 @@
   "bugs": "https://github.com/robksawyer/tailwindcss-mobile-precision/issues",
   "homepage": "https://github.com/robksawyer/tailwindcss-mobile-precision",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watchAll",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "release": "f(){ release-it $1 && github-release-from-changelog ;};f"
   },

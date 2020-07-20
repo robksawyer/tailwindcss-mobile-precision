@@ -19,7 +19,7 @@ module.exports = plugin(
   },
   {
     theme: {
-      mobilePrecision: {
+      extend: {
         screens: {
           psm: {
             // iPhone 5/SE
@@ -173,7 +173,7 @@ module.exports = plugin(
               'only screen and (-webkit-min-device-pixel-ratio:2) and (min-device-width:1366px) and (max-device-width:1366px) and (orientation:landscape)',
           },
         },
-      },
+      }
     },
     variants: {
       mobilePrecision: ['responsive'],
