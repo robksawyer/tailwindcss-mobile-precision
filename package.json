@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-mobile-precision",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tailwind CSS plugin to add media queries specific to phones and tablets for preicision layouts.",
   "author": "Rob Sawyer <robksawyer@gmail.com>",
   "license": "ISC",
