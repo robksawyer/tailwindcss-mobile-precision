@@ -20,10 +20,10 @@ module.exports = plugin(
   {
     theme: {
       mobilePrecision: {
-        screen: {
+        screens: {
           psm: {
             // iPhone 5/SE
-            raw: '(min-width: 320px),(max-width: 568px)',
+            min: '320px', max: '568px'
           },
           psmp: {
             // iPhone 5/SE
