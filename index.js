@@ -7,6 +7,7 @@
  * Release notes explain a bit more about the feature
  * @see https://github.com/tailwindcss/tailwindcss/releases/tag/v1.2.0#user-content-allow-plugins-to-extend-the-user-s-config
  * @see https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106
+ * @see https://tailwindcss.com/docs/configuration/
  * LEGEND
  *  [mobile-type][size][both/portrait/landscape]
  *    p =
@@ -128,8 +129,6 @@ function getUserSelectedScreens(options = []) {
   return finalScreens
 }
 
-console.log('Total screens:', Object.keys(screens).length)
-
 module.exports = plugin.withOptions(
   function (options) {
     return function ({ addUtilities, e, variants, theme }) {
@@ -137,9 +136,7 @@ module.exports = plugin.withOptions(
     }
   },
   function (options) {
-    console.log('options', options)
     let finalScreens = getUserSelectedScreens(options)
-    console.log('finalScreens', finalScreens)
     return {
       theme: {
         // Doesn't work
