@@ -139,8 +139,8 @@ The above configuration would generate the following CSS:
 Which you can then use in your HTML like this:
 
 ```html
-<div class="psmp:hidden lg:block">
-  <p>I'm hidden on small phones in portrait mode.</p>
+<div class="psm:hidden lg:block">
+  <p>I'm hidden on small phones.</p>
 </div>
 ```
 
