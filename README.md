@@ -15,6 +15,15 @@ yarn add tailwindcss-media-precision
 
 The following plugin options are available. See below how these are passed (via an array) to the plugin in your `tailwind.config.js`.
 
+### LEGEND
+ [mobile-type][size][both/portrait/landscape]
+**p**
+  Beginning: phone e.g. psm = phone, small
+  End: portrait e.g. psmp = phone, small, portrait (only)
+**t**
+  Beginning: tablet e.g. tsmp = tablet, small, portrait (only)
+
+
 ## Options Available
 ### Phone Options
 #### Small Phones
