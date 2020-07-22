@@ -112,31 +112,46 @@ const tabletScreens = {
 
 const screens = Object.assign({}, phoneScreens, tabletScreens)
 
-console.log('Total screens:', Object.keys(screens).length)
-module.exports = plugin.withOptions(function (options) {
-  console.log('options', options)
+/**
+ * getUserSelectedScreens
+ * Handles fetching the media query for the user selected screens
+ * @param {array} options
+ * @return {object}
+ */
+function getUserSelectedScreens(options = []) {
   let finalScreens = {}
   options.forEach((screen) => {
     finalScreens = Object.assign({}, finalScreens, {
       [screen]: screens[screen],
     })
   })
-  console.log('finalScreens', finalScreens)
-  return (
-    function ({ addUtilities, e, variants, theme }) {
-      // ...
-    },
-    {
+  return finalScreens
+}
+
+console.log('Total screens:', Object.keys(screens).length)
+
+module.exports = plugin.withOptions(
+  function (options) {
+    userOptions = options
+    return function ({ addUtilities, e, variants, theme }) {
+      const currentScreens = theme('screens')
+    }
+  },
+  function (options) {
+    console.log('options', options)
+    let finalScreens = getUserSelectedScreens(options)
+    console.log('finalScreens', finalScreens)
+    return {
       theme: {
-        extend: {
+        mobilePrecision: {
           screens: {
             ...finalScreens,
           },
         },
       },
-      // variants: {
-      //   mobilePrecision: [],
-      // },
+      variants: {
+        // mobilePrecision: [],
+      },
     }
-  )
-})
+  }
+)
