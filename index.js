@@ -132,7 +132,6 @@ console.log('Total screens:', Object.keys(screens).length)
 
 module.exports = plugin.withOptions(
   function (options) {
-    userOptions = options
     return function ({ addUtilities, e, variants, theme }) {
       const currentScreens = theme('screens')
     }
