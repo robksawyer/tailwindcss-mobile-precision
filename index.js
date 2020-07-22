@@ -142,11 +142,17 @@ module.exports = plugin.withOptions(
     console.log('finalScreens', finalScreens)
     return {
       theme: {
-        mobilePrecision: {
+        // Doesn't work
+        // mobilePrecision: {
+        extend: {
+          // Doesn't work
+          // mobilePrecision: {
           screens: {
             ...finalScreens,
           },
+          // },
         },
+        // },
       },
       variants: {
         // mobilePrecision: [],
