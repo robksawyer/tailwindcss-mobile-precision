@@ -155,7 +155,7 @@ module.exports = plugin.withOptions(
         // },
       },
       variants: {
-        // mobilePrecision: [],
+        mobilePrecision: [],
       },
     }
   }
