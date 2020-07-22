@@ -127,8 +127,12 @@ module.exports = plugin.withOptions(function (options) {
       // ...
     },
     {
-      screens: {
-        ...finalScreens,
+      theme: {
+        extend: {
+          screens: {
+            ...finalScreens,
+          },
+        },
       },
       // variants: {
       //   mobilePrecision: [],

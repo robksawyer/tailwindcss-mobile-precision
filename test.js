@@ -27,8 +27,8 @@ const generatePluginCss = (config, pluginOptions = {}) => {
               // dark: { raw: '(prefers-color-scheme: dark)' },
             },
           },
-          corePlugins: true,
-          plugins: [require('./index.js')(['psml'])],
+          corePlugins: false,
+          plugins: [require('./index.js')(['psm'])],
         },
         config
       )
